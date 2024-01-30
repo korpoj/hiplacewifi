@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheHiWifi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            background-color: #f5f0df;
+        }
+
+        .login-box {
+            margin-top: 30vh;
+            height: 40vh;
+            width: 80vw;
+            background-color: rgba(255, 255, 255, 0.1); /* 50% transparent white */
+            background-size: cover;
+            border-radius: 5vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            box-shadow: 2vh 2vh 5vh rgba(0,0,0,0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            overflow: hidden;
+        }
+
+        #heading {
+            font-size: 3vmax; /* Adjust the font size as needed */
+            text-align: center;
+            opacity: 1; /* 100% transparent */
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        #1 {
+            font-size: 1vmax; /* Adjust the font size as needed */
+            margin-top: 5px;
+            text-align: center;
+            opacity: 1; /* 100% transparent */
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        h2 {
+            position: absolute;
+            font-size: 8em;
+            color: rgba(255, 255, 255, 0.5);
+            z-index: 1;
+        }
+
+        #B1 {
+            top: -12vh;
+            right: 3vw;
+        }
+
+        #B2 {
+            bottom: -12vh;
+            left: 3vw;
+        }
+
+        .infoline {
+            font-size: 1.8vmax;
+            margin-top: 5vh;
+            z-index: 2;
+            position: relative;
+        }
+
+        .infoline button {
+            margin-left: 10px;
+        }
+
+        .circle {
+            width: 1em;
+            height: 1em;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            margin: 0 0.5em; /* Adjust the spacing between circles */
+            display: inline-block;
+        }
+
+        #C1 {
+            background-color: #fc7f03;
+        }
+
+        #C2 {
+            background-color: #f046df;
+        }
+
+        #C3 {
+            background-color: #46cef0;
+        }
+
+
+        @media (min-width: 50vw) and (min-height: 50vw) {
+            .diagonal-rectangle {
+                width: 50vh;
+                height: 50vh;
+            }
+        }
+
+        @media (max-width: 50vw) or (max-height: 50vw) {
+            .diagonal-rectangle {
+                width: 50vw;
+                height: 50vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <h2 id="B1">Hi</h2>
+        <h2 id="B2">Place</h2>
+        <div id="heading">Welcome to The Hi Place</div>
+        <div id="1">ยินดีต้อนรับสู่โรงแรม เดอะ ไฮ เพลส</div>
+        <div class="infoline">Wifi Name: build1 floor1-11</div>
+        <div class="infoline">Password: thehiplace101  
+            <button onclick="copyText()">Copy</button>
+        </div>
+        <div class="infoline">
+            <span class="circle" id="C1"></span>
+            <span class="circle" id="C2"></span>
+            <span class="circle" id="C3"></span>
+        </div>
+        
+    </div>
+    
+    <script>
+        function copyText() {
+            navigator.clipboard.writeText("thehiplace101");
+        }
+    </script>
+</body>
+</html>
